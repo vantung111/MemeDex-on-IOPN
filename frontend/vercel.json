@@ -1,0 +1,28 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_CHAIN_ID": "984",
+    "NEXT_PUBLIC_RPC_URL": "https://testnet-rpc.iopn.tech",
+    "NEXT_PUBLIC_BLOCK_EXPLORER": "https://testnet.iopn.tech",
+    "NEXT_PUBLIC_NETWORK_NAME": "OPN Testnet"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
